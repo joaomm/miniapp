@@ -1,5 +1,7 @@
 Miniapp::Application.routes.draw do
-  resources :task_lists
+  resources :task_lists do
+      resources :tasks
+  end
 
   devise_for :users
   root to: "task_lists#index"

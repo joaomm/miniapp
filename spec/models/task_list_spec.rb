@@ -16,5 +16,26 @@ describe TaskList do
   it "should not be valid without user" do
     build(:task_list, user_id: nil).should_not be_valid
   end
+    
+  describe "tasks" do
+    before :each do
+      @task_list = create(:task_list)
+    end
+    
+    it "should be empty if no tasks of the given list was created" do  
+      @task_list.tasks.should be_empty
+    end
+    
+    it "should contain the list's tasks" do
+      task = create(:task, task_list: @task_list)
+      @task_list.tasks.should include task
+    end
+    
+    it "should not contain task lists that are not the users" do
+      task = create(:task)
+      @task_list.tasks.should_not include task
+    end 
+  end
+  
   
 end

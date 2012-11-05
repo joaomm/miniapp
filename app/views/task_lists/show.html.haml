@@ -6,10 +6,17 @@
 %p
   %b Privacy:
   = @task_list.privacy
-%p
-  %b User:
-  = @task_list.user
 
+%table
+  - @task_list.tasks.each do |task|
+    %tr
+      %td= task.name
+      %td= link_to 'Edit', [:edit, @task_list, task]
+      %td= link_to 'Destroy', [@task_list, task], method: :delete, data: { confirm: 'Are you sure?' }
+
+  
+= link_to 'New Task', [:new, @task_list, :task]
+\|  
 = link_to 'Edit', edit_task_list_path(@task_list)
 \|
 = link_to 'Back', task_lists_path
