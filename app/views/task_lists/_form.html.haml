@@ -1,0 +1,10 @@
+= simple_form_for(@task_list) do |f|
+  = f.error_notification
+  = f.hidden_field :user_id, value: current_user.id
+
+  .form-inputs
+    = f.input :name
+    = f.input :privacy, collection: [[t(:private), "private"], [t(:public), "public"]], as: :radio_buttons, checked: "private"
+
+  .form-actions
+    = f.button :submit
