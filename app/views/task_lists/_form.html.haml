@@ -1,6 +1,6 @@
-= simple_form_for(@task_list) do |f|
+= simple_form_for([@user, @task_list]) do |f|
   = f.error_notification
-  = f.hidden_field :user_id, value: current_user.id
+  = f.hidden_field :user_id, value: @user.id
 
   .form-inputs
     = f.input :name

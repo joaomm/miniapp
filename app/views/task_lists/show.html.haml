@@ -11,12 +11,14 @@
   - @task_list.tasks.each do |task|
     %tr
       %td= task.name
-      %td= link_to 'Edit', [:edit, @task_list, task]
-      %td= link_to 'Destroy', [@task_list, task], method: :delete, data: { confirm: 'Are you sure?' }
+      - if @task_list.user == current_user
+        %td= link_to 'Edit', [:edit, @task_list, task]
+        %td= link_to 'Destroy', [@task_list, task], method: :delete, data: { confirm: 'Are you sure?' }
 
-  
-= link_to 'New Task', [:new, @task_list, :task]
-\|  
-= link_to 'Edit', edit_task_list_path(@task_list)
-\|
-= link_to 'Back', task_lists_path
+
+- if @task_list.user == current_user  
+  = link_to 'New Task', [:new, @task_list, :task]
+  \|  
+  = link_to 'Edit', [@task_list.user, @task_list]
+  \|
+= link_to 'Back', [@task_list.user, :task_lists]

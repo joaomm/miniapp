@@ -1,16 +1,18 @@
-%h1 Your Lists
+%h1= "#{@user.email} lists"
 
 %table
   %tr
   - @task_lists.each do |task_list|
     %tr
-      %td= task_list.name
       %td= task_list.privacy
-      %td= task_list.user.email
-      %td= link_to 'Show', task_list
-      %td= link_to 'Edit', edit_task_list_path(task_list)
-      %td= link_to 'Destroy', task_list, method: :delete, data: { confirm: 'Are you sure?' }
+      %td= link_to task_list.name, [@user, task_list]
+
+      
+      - if @user == current_user
+        %td= link_to 'Edit', [:edit, @user, task_list]
+        %td= link_to 'Destroy', [@user, task_list], method: :delete, data: { confirm: 'Are you sure?' }
 
 %br
 
-= link_to 'New Task list', new_task_list_path
+- if @user == current_user
+  = link_to 'New Task list', [:new, @user, :task_list]
