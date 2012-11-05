@@ -2,11 +2,9 @@ Miniapp::Application.routes.draw do
   devise_for :users
   
   resources :users do
-    resources :task_lists
-  end
-
-  resources :task_lists do
-    resources :tasks
+    resources :task_lists do
+      resources :tasks 
+    end
   end
 
 

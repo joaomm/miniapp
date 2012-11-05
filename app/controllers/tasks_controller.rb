@@ -22,20 +22,26 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(params[:task])
-    @task.save
-    respond_with(@task_list)
+    if @task.save
+      respond_with(@task_list.user, @task_list)
+    else
+      respond_with(@task)
+    end
   end
 
   def update
     @task = Task.find(params[:id])
-    @task.update_attributes(params[:task])
-    respond_with(@task_list)
+    if @task.update_attributes(params[:task])
+      respond_with(@task_list.user, @task_list)
+    else
+      respond_with(@task)
+    end
   end
 
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    respond_with(@task_list)
+    respond_with(@task_list.user, @task_list)
   end
   
   private
