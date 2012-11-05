@@ -1,6 +1,6 @@
 class TaskListsController < ApplicationController
   def index
-    @task_lists = TaskList.all
+    @task_lists = current_user.task_lists
     respond_with(@task_lists)
   end
 
