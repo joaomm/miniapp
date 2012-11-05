@@ -1,3 +1,12 @@
-// Place all the styles related to the task_lists controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.form-inputs {
+	margin: 10px 0;
+	.input {
+		margin: 10px 0;
+		label {
+			margin-right: 10px;
+		}
+		input.radio_buttons {
+			margin-right: 3px;
+		}
+	}
+}

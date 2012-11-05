@@ -6,9 +6,12 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    
-    = link_to t(:sign_out), destroy_user_session_path, method: :delete
-    
-    %p.notice= notice
-    %p.alert= alert
-    = yield
+    #header
+      %h1= "Mini To Do"
+      #navigation
+        = link_to t(:sign_out), destroy_user_session_path, method: :delete
+   
+    #content
+      %p.notice= notice
+      %p.alert= alert
+      = yield
