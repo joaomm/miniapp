@@ -1,14 +1,8 @@
 body {
   background-color: #fff;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-}
-
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 14px;
   line-height: 18px;
 }
 
@@ -19,20 +13,18 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #3AA7D4;
+	text-decoration: none;
   &:visited {
-    color: #666;
+    color: #3AA7D4;
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+		text-decoration: underline;
   }
-}
+}    
 
-div {
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
+td {
+	padding: 5px 10px 5px 0;
 }
 
 #notice {
@@ -66,4 +58,14 @@ div {
     font-size: 12px;
     list-style: square;
   }
+}
+
+.btn {
+	color: white;
+	padding: 5px 10px;
+	border-radius: 2px;
+	background-color: #E95C33;
+	border: 1px solid rgba(0, 0, 0, 0.0980392);
+	font-size: 12px;
+	cursor: pointer;
 }

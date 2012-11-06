@@ -6,7 +6,7 @@
   - @task_lists.each do |task_list|
     %tr
       %td= task_list.privacy
-      %td= link_to task_list.name, [@user, task_list]
+      %td.task_list_name= link_to task_list.name, [@user, task_list]
 
       
       - if @user == current_user

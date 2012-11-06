@@ -10,7 +10,7 @@
 %table
   - @task_list.tasks.each do |task|
     %tr
-      %td= task.name
+      %td.task_name= task.name
       - if @task_list.user == current_user
         %td= link_to 'Edit', [:edit, @user, @task_list, task]
         %td= link_to 'Destroy', [@user, @task_list, task], method: :delete, data: { confirm: 'Are you sure?' }

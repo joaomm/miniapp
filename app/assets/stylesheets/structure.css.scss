@@ -1,5 +1,5 @@
 body {
-	background-color: #EDEDED;
+	background: url(body.gif) repeat;
 }
 
 #header {
@@ -13,5 +13,7 @@ body {
 	padding: 20px;
 	margin: 20px auto;
 	border-radius: 5px;
+	border: 1px solid #E0E0E0;
 	background-color: white;
+	min-height: 200px;
 }
