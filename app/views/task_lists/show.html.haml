@@ -17,8 +17,4 @@
   
   #tasks
     = render @task_list.tasks
-    #new_task
-      = simple_form_for([@task_list.user, @task_list, Task.new], remote: true) do |f|
-        = f.hidden_field :task_list_id, value: @task_list.id
-        .task_name= f.input :name, label: false
-      
+    = render "tasks/form", task_list: @task_list, task: Task.new
