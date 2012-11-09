@@ -10,4 +10,19 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   
   has_many :task_lists
+  has_and_belongs_to_many :favorite_task_lists, class_name: "TaskList"
+  
+  def mark_task_list_as_favorite(task_list)
+    favorite_task_lists << task_list
+    save
+  end
+  
+  def unmark_task_list_as_favorite(task_list)
+    favorite_task_lists.delete task_list
+    save
+  end
+  
+  def task_list_marked_as_favorite?(task_list)
+    favorite_task_lists.include?(task_list)
+  end
 end

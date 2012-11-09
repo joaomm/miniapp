@@ -5,6 +5,8 @@ Miniapp::Application.routes.draw do
     resources :task_lists do
       resources :tasks 
     end
+    post :mark_task_list_as_favorite
+    post :unmark_task_list_as_favorite
   end
 
 

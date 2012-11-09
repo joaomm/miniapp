@@ -6,6 +6,14 @@
     = image_tag("#{@task_list.privacy}.png", title: @task_list.privacy, alt: @task_list.privacy)
 
   %p#notice= notice
+                   
+  - if @user != current_user
+    #mark_as_favorite
+      - if current_user.task_list_marked_as_favorite?(@task_list)    
+        = link_to "Unmark as favorite", user_unmark_task_list_as_favorite_path(current_user, task_list_id: @task_list.id), method: :post
+      - else
+        = link_to "Mark as favorite", user_mark_task_list_as_favorite_path(current_user, task_list_id: @task_list.id), method: :post                                                                                                                       
+     
  
   #actions
     - if @user == current_user  
