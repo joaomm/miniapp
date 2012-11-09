@@ -3,17 +3,17 @@
     = link_to @user.email, [@user, :task_lists]
     %span /
     = link_to @task_list.name
-  
-  = @task_list.privacy
+    = image_tag("#{@task_list.privacy}.png", title: @task_list.privacy, alt: @task_list.privacy)
 
   %p#notice= notice
-
-  - if @user == current_user  
-    = link_to_function "New Task", "$('#task_name').focus();"
-    \|  
-    = link_to 'Edit', [:edit, @task_list.user, @task_list]
-    \|
-  = link_to 'Back', [@task_list.user, :task_lists]
+ 
+  #actions
+    - if @user == current_user  
+      = link_to_function "New Task", "$('#task_name').focus();"
+      \|  
+      = link_to 'Edit', [:edit, @task_list.user, @task_list]
+      \|
+    = link_to 'Back', [@task_list.user, :task_lists]
   
   #tasks
     = render @task_list.tasks

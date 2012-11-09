@@ -5,7 +5,7 @@
   %tr
   - @task_lists.each do |task_list|
     %tr
-      %td= task_list.privacy
+      %td= image_tag("#{@task_list.privacy}.png", title: @task_list.privacy, alt: @task_list.privacy)
       %td.task_list_name= link_to task_list.name, [@user, task_list]
 
       

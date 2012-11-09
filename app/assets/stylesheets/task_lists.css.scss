@@ -17,10 +17,19 @@
 }
 
 
-#task_list {
+#task_list {  
+ 	h1 {
+  	img {
+			position: relative;
+			top: 4px;
+		}
+	}
+	#actions {
+		float: right;
+	}
 	#tasks {
 		border: 1px solid #CCC;
-		margin: 20px 0;
+		margin: 50px 0 20px 0;
 		input{
 			border: none;
 			font-size: 14px;
