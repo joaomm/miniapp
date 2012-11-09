@@ -1,24 +1,24 @@
-%h1
-  = link_to @user.email, [@user, :task_lists]
-  %span /
-  = link_to @task_list.name
+#task_list
+  %h1
+    = link_to @user.email, [@user, :task_lists]
+    %span /
+    = link_to @task_list.name
   
-= @task_list.privacy
+  = @task_list.privacy
 
-%p#notice= notice
+  %p#notice= notice
 
-%table
-  - @task_list.tasks.each do |task|
-    %tr
-      %td.task_name= task.name
-      - if @task_list.user == current_user
-        %td= link_to 'Edit', [:edit, @user, @task_list, task]
-        %td= link_to 'Destroy', [@user, @task_list, task], method: :delete, data: { confirm: 'Are you sure?' }
-
-
-- if @user == current_user  
-  = link_to 'New Task', [:new, @user, @task_list, :task]
-  \|  
-  = link_to 'Edit', [:edit, @task_list.user, @task_list]
-  \|
-= link_to 'Back', [@task_list.user, :task_lists]
+  - if @user == current_user  
+    = link_to_function "New Task", "$('#task_name').focus();"
+    \|  
+    = link_to 'Edit', [:edit, @task_list.user, @task_list]
+    \|
+  = link_to 'Back', [@task_list.user, :task_lists]
+  
+  #tasks
+    = render @task_list.tasks
+    #new_task
+      = simple_form_for([@task_list.user, @task_list, Task.new], remote: true) do |f|
+        = f.hidden_field :task_list_id, value: @task_list.id
+        .task_name= f.input :name, label: false
+      

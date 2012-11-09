@@ -15,3 +15,17 @@
 	min-width: 200px;
 	padding: 5px 10px;
 }
+
+
+#task_list {
+	#tasks {
+		border: 1px solid #CCC;
+		margin: 20px 0;
+	}
+	#new_task input{
+		border: none;
+		font-size: 14px;
+		padding: 5px 10px;
+		width: 97%;
+	}
+}

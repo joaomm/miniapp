@@ -1,6 +1,16 @@
-// Place all the styles related to the tasks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.task_name {
-	min-width: 200px;
+.task {
+	border-bottom: 1px solid #CCC;
+	padding: 5px 10px;
+	position: relative;
+	&:last-child {
+	 border-bottom: none; 
+	}
+	.task_name {
+		width: 100%;
+	}
+	.task_actions {
+		position: absolute;
+		right: 5px;
+		top: 5px;
+	}
 }

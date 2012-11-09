@@ -1,5 +1,5 @@
 %h1 Editing task
 
-= render 'form'
+= render 'form', task_list: @task_list, task: @task
 
-= link_to 'Back', @task_list
+= link_to 'Back', [@task_list.user, @task_list] 
