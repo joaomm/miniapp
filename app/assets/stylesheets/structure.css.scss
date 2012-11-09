@@ -1,19 +1,48 @@
 body {
 	background: url(body.gif) repeat;
 }
+#wrapper {
+	width: 940px;
+	padding: 20px 10px;
+	margin: 0 auto;
+}
 
 #header {
-	width: 920px;
-	padding: 20px;
-	margin: 20px auto;
+	margin: 30px 0;
+}
+
+#lists_navigation {
+	float: left;
+	width: 200px;
+	border-radius: 5px 0 0 5px; 
+	border: 1px solid #E0E0E0;
+	border-right: none;
+	background-color: white;
+	padding: 10px;
+	margin: 20px 0;
+	height: 600px;
+	overflow: auto;
+	position: relative;
+	#new_task_list {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+	}
+	#user_task_lists {
+		margin-bottom: 20px;
+	} 
 }
 
 #content {
-	width: 920px;
-	padding: 20px;
-	margin: 20px auto;
+	float: left;
+	width: 675px;
+	padding: 20px 20px 40px 20px;
 	border-radius: 5px;
 	border: 1px solid #E0E0E0;
 	background-color: white;
-	min-height: 200px;
+	min-height: 600px;
+}
+
+#footer {
+	clear: both;
 }

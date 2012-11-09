@@ -17,12 +17,12 @@
 	}
 	#tasks {
 		border: 1px solid #CCC;
-		margin: 50px 0 20px 0;
+		margin: 50px 0;
 		input{
 			border: none;
 			font-size: 14px;
 			padding: 5px 10px;
-			width: 897px;
+			width: 90%;
 		}
 		.edit_task {
 			margin: -5px -10px;
@@ -38,7 +38,7 @@
 		vertical-align: middle;
 	}
 	.task_list_name {
-		width: 40%;
+		width: 55%;
 		margin-right: 5px;
 	}
 } 

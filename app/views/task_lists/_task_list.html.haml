@@ -1,6 +1,4 @@
-.task_list
-  .task_list_privacy= image_tag("#{task_list.privacy}.png", title: task_list.privacy, alt: task_list.privacy)
-  
+.task_list  
   .task_list_name= link_to truncate(task_list.name, length: 20), [task_list.user, task_list]
   
   - if task_list.user == current_user

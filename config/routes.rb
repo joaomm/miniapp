@@ -11,7 +11,8 @@ Miniapp::Application.routes.draw do
       get :home
     end
   end
-
+  
+  resources :task_lists, only: [:index]
 
   root to: "users#home"
   # The priority is based upon order of creation:

@@ -4,8 +4,8 @@ class UsersController < ApplicationController
 
   def home
     @user = current_user
+    @task_list = @user.task_lists.first
   end
-
   
   def mark_task_list_as_favorite
     @user.mark_task_list_as_favorite(@task_list)

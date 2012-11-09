@@ -1,19 +1,4 @@
-%h1
-  = link_to @user.email, [@user, :task_lists]
+#find_task_lists
+  %h1 Find Lists
 
-%table
-  %tr
-  - @task_lists.each do |task_list|
-    %tr
-      %td= image_tag("#{task_list.privacy}.png", title: task_list.privacy, alt: task_list.privacy)
-      %td.task_list_name= link_to task_list.name, [@user, task_list]
-
-      
-      - if @user == current_user
-        %td= link_to 'Edit', [:edit, @user, task_list]
-        %td= link_to 'Destroy', [@user, task_list], method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-- if @user == current_user
-  = link_to 'New Task list', [:new, @user, :task_list]
+  #task_lists= render @task_lists

@@ -5,11 +5,23 @@
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
+    
   %body
-    #header
-      %h1= link_to "Mini To Do", home_users_path
-      #navigation
-        = link_to t(:sign_out), destroy_user_session_path, method: :delete
-   
-    #content
-      = yield
+    #wrapper  
+      #header
+        %h1= link_to "Mini To Do", home_users_path
+        #navigation
+          = link_to "Find Lists", task_lists_path
+          = link_to t(:sign_out), destroy_user_session_path, method: :delete
+    
+      #lists_navigation
+        %h3= "Your Lists" 
+        #new_task_list= link_to "New", [:new, current_user, :task_list]
+        #user_task_lists= render current_user.task_lists
+
+        %h3= "Your Favorites"
+        #favorite_task_lists= render current_user.favorite_task_lists
+    
+      #content= yield   
+     
+      #footer

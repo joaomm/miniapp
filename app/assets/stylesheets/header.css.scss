@@ -1,10 +1,27 @@
 #header {
-	h1 a{
-		font-size: 50px;
-		color: #2E2E2E;
-		text-shadow: 1px 2px 1px white;
+	position: relative;
+	h1 {
+		margin-left: 240px; 
+		a{
+			font-size: 50px;
+			color: #2E2E2E;
+			text-shadow: 1px 2px 1px white;
+		}
 	}
 	#navigation {
-		float: right;
+		position: absolute;
+		top: -8px;
+		right: 0;
+		padding: 10px;
+		border-radius: 5px;
+		border: 1px solid #E0E0E0;
+		background-color: #232323;
+		a {
+			font-weight: bold;
+			color: white;
+			padding: 10px 5px;
+
+		}
+		
 	}
 }
