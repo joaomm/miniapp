@@ -5,4 +5,8 @@ class TaskList < ActiveRecord::Base
   has_many :tasks
   
   scope :public, where(privacy: "public")
+  
+  def public?
+    privacy == "public"
+  end
 end

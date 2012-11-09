@@ -50,4 +50,15 @@ describe TaskList do
     end
   end
   
+  describe "public?" do
+    it "should be true if privacy is public" do
+      create(:task_list, privacy: "public").should be_public
+    end
+    
+    it "should be false if privacy is private" do
+      create(:task_list, privacy: "private").should_not be_public         
+    end
+    
+  end
+  
 end
