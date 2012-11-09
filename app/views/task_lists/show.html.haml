@@ -7,7 +7,7 @@
 
   %p#notice= notice
                    
-  - if @user != current_user
+  - if @user != current_user && !@task_list.private?
     #mark_as_favorite
       - if current_user.task_list_marked_as_favorite?(@task_list)    
         = link_to "Unmark as favorite", user_unmark_task_list_as_favorite_path(current_user, task_list_id: @task_list.id), method: :post

@@ -16,7 +16,7 @@
     
       #lists_navigation
         %h3= "Your Lists" 
-        #new_task_list= link_to "New", [:new, current_user, :task_list]
+        #new_task_list= link_to image_tag("add.png", alt: "new", title: "new"), [:new, current_user, :task_list]
         #user_task_lists= render current_user.task_lists
 
         %h3= "Your Favorites"

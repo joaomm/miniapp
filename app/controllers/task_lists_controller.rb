@@ -2,7 +2,7 @@ class TaskListsController < ApplicationController
   before_filter :fetch_user
   
   def index
-    @task_lists = TaskList.all
+    @task_lists = TaskList.public
     respond_with(@task_lists)
   end
 

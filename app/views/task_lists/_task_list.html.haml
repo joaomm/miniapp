@@ -3,7 +3,7 @@
   
   - if task_list.user == current_user
     .task_list_actions{style: "display: none"}
-      = link_to 'Edit', [:edit, task_list.user, task_list]
-      = link_to 'Destroy', [task_list.user, task_list], method: :delete, data: { confirm: 'Are you sure?' }
+      = link_to image_tag("edit.png", title: "edit", alt: "edit"), [:edit, task_list.user, task_list]
+      = link_to image_tag("trash.png", title: "remove", alt: "remove"), [task_list.user, task_list], method: :delete, data: { confirm: 'Are you sure?' }
       
   

@@ -38,4 +38,16 @@ describe TaskList do
   end
   
   
+  describe "public scope" do
+    it "should include public lists" do
+      public_task_list = create(:task_list, privacy: "public")
+      TaskList.public.should include(public_task_list)
+    end
+    
+    it "should not include private lists" do
+      private_task_list = create(:task_list, privacy: "private")
+      TaskList.public.should_not include(private_task_list)
+    end
+  end
+  
 end
