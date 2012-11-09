@@ -17,4 +17,5 @@
   
   #tasks
     = render @task_list.tasks
-    = render "tasks/form", task_list: @task_list, task: Task.new
+    - if @task_list.user == current_user
+      = render "tasks/form", task_list: @task_list, task: Task.new
