@@ -1,0 +1,5 @@
+<% if @task.name.present? %>
+	$("#task_<%= @task.id %>").replaceWith("<%= escape_javascript(render partial: 'task', locals: {task: @task}) %>")
+<% else %>
+	$("#task_<%= @task.id %>").remove();
+<% end %>

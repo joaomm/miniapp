@@ -1,0 +1,2 @@
+$("#task_<%= @task.id %>").html(" <%= escape_javascript(render partial: 'tasks/form', locals: {task_list: @task_list, task: @task}) %>");
+$("#edit_task_<%= @task.id %> #task_name").focus();

@@ -34,6 +34,7 @@ class TasksController < ApplicationController
     if @task.update_attributes(params[:task])
       respond_with(@task_list.user, @task_list)
     else
+      @task.destroy if @task.name.empty?
       respond_with(@task)
     end
   end

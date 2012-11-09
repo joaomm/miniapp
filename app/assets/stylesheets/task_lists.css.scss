@@ -21,11 +21,15 @@
 	#tasks {
 		border: 1px solid #CCC;
 		margin: 20px 0;
+		input{
+			border: none;
+			font-size: 14px;
+			padding: 5px 10px;
+			width: 897px;
+		}
+		.edit_task {
+			margin: -5px -10px;
+		}
 	}
-	#new_task input{
-		border: none;
-		font-size: 14px;
-		padding: 5px 10px;
-		width: 97%;
-	}
+	
 }
