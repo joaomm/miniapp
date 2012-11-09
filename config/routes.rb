@@ -7,10 +7,13 @@ Miniapp::Application.routes.draw do
     end
     post :mark_task_list_as_favorite
     post :unmark_task_list_as_favorite
+    collection do
+      get :home
+    end
   end
 
 
-  root to: "task_lists#index"
+  root to: "users#home"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

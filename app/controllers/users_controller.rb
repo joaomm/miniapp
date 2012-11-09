@@ -1,6 +1,11 @@
 class UsersController < ApplicationController 
-  before_filter :fetch_user
+  before_filter :fetch_user, except: [:home]
   before_filter :fetch_task_list, only: [:mark_task_list_as_favorite, :unmark_task_list_as_favorite]
+
+  def home
+    @user = current_user
+  end
+
   
   def mark_task_list_as_favorite
     @user.mark_task_list_as_favorite(@task_list)
@@ -10,7 +15,7 @@ class UsersController < ApplicationController
   def unmark_task_list_as_favorite
     @user.unmark_task_list_as_favorite(@task_list)
     respond_with(@task_list.user, @task_list)
-  end
+  end  
   
   private
     def fetch_user

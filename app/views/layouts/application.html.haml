@@ -7,7 +7,7 @@
     = csrf_meta_tags
   %body
     #header
-      %h1= "Mini To Do"
+      %h1= link_to "Mini To Do", home_users_path
       #navigation
         = link_to t(:sign_out), destroy_user_session_path, method: :delete
    

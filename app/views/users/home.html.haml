@@ -1,0 +1,8 @@
+#home
+  %h1= @user.email
+  
+  %h3= "Lists" 
+  #user_task_lists= render @user.task_lists
+  
+  %h3= "Favorites"
+  #favorite_task_lists= render @user.favorite_task_lists

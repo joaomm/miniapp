@@ -11,19 +11,7 @@
 	}
 }
 
-.task_list_name {
-	min-width: 200px;
-	padding: 5px 10px;
-}
-
-
 #task_list {  
- 	h1 {
-  	img {
-			position: relative;
-			top: 4px;
-		}
-	}
 	#actions {
 		float: right;
 	}
@@ -40,5 +28,24 @@
 			margin: -5px -10px;
 		}
 	}
-	
+}
+
+.task_list {
+	padding: 5px 0;
+	position: relative;
+	.task_list_privacy, .task_list_name, .task_list_actions {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.task_list_name {
+		width: 40%;
+		margin-right: 5px;
+	}
+} 
+
+#home {
+	#user_task_lists {
+		margin-bottom: 20px;
+		width: 300px;
+	}
 }
