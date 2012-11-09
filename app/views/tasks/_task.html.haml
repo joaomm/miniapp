@@ -1,4 +1,4 @@
-.task{id: "task_#{task.id}"}
+.task{id: "task_#{task.id}", "data-edit-url" => edit_user_task_list_task_path(task.task_list.user, task.task_list, task, format: :js)}
   .task_name= task.name
   
   - if task.task_list.user == current_user
