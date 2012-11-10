@@ -14,15 +14,14 @@ feature "Create Task List", %q{
   end
   
   scenario "Access and complete task list form with valid attributes" do
-    fill_in "task_list_name", with: "New Task List"
+    fill_in "task_list_name", with: "My Awesome Task List"
     choose "Public"
     click_button "Create Task list"
-    page.should have_content("Task list was successfully created.")
+    find("#task_list h1").should have_content("My Awesome Task List")
   end
    
   scenario "Using invalid attributes" do
     click_button "Create Task list"
-    page.should_not have_content("Task list was successfully created.")
     page.should have_content("can't be blank")
   end
 end
