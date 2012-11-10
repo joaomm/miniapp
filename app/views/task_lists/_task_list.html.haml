@@ -1,5 +1,5 @@
-.task_list  
-  .task_list_name= link_to truncate(task_list.name, length: 20), [task_list.user, task_list]
+.task_list
+  = link_to truncate(task_list.name, length: 20), [task_list.user, task_list], class: "task_list_name"
   
   - if task_list.user == current_user
     .task_list_actions{style: "display: none"}
