@@ -28,10 +28,12 @@
 .task_list {
 	position: relative;
 	a.task_list_name {
-		padding: 10px 0;
+		padding: 10px 5px;
 		display: block;
-		border-top: 1px solid white;
 		border-bottom: 1px solid #CCC;
+		&:hover {
+		 background-color: #F2F2F2; 
+		}
 	}
 	.task_list_actions {
 		position: absolute;
