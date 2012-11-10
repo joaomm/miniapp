@@ -1,6 +1,27 @@
 #task_list {  
+	h1 {
+		margin-bottom: 10px;
+		display: inline-block;
+	}
+	#task_list_edit {
+		font-size: 13px;
+		margin-left: 10px;
+	}
+	#task_list_owner {
+		font-size: 12px;
+		a {
+			margin-left: 5px;
+		}
+	}
 	#actions {
-		float: right;
+		text-align: right;
+		a {
+			padding: 0 5px;
+		}
+	}
+	#tasks {
+		border: 1px solid #CCC;
+		margin: 10px 0;
 	}
 }
 
