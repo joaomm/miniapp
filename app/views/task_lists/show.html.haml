@@ -4,8 +4,6 @@
     %span /
     = link_to @task_list.name
     = image_tag("#{@task_list.privacy}.png", title: @task_list.privacy, alt: @task_list.privacy)
-
-  %p#notice= notice
                    
   - if @user != current_user && @task_list.public?
     #mark_as_favorite

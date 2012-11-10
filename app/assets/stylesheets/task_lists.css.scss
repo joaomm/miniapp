@@ -1,33 +1,6 @@
-.form-inputs {
-	margin: 10px 0;
-	.input {
-		margin: 10px 0;
-		label {
-			margin-right: 10px;
-		}
-		input.radio_buttons {
-			margin-right: 3px;
-		}
-	}
-}
-
 #task_list {  
 	#actions {
 		float: right;
-	}
-	#tasks {
-		border: 1px solid #CCC;
-		margin: 50px 0;
-		input{
-			border: none;
-			font-size: 14px;
-			padding: 5px 10px;
-			width: 97%;
-			background-color: #FAFAFA;
-		}
-		.edit_task {
-			margin: -5px -10px;
-		}
 	}
 }
 
@@ -45,6 +18,7 @@
 		top: 10px;
 	}
 } 
+
 
 #home {
 	#user_task_lists {

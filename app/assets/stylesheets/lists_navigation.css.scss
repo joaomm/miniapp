@@ -1,0 +1,19 @@
+#lists_navigation {
+	border-radius: 5px 0 0 5px; 
+	border: 1px solid #E0E0E0;
+	border-right: none;
+	background-color: #FAFAFA;
+	padding: 10px;
+	margin: 20px 0;
+	height: 600px;
+	overflow: auto;
+	position: relative;
+	#new_task_list {
+		position: absolute;
+		right: 10px;
+		top: 4px;
+	}
+	#user_task_lists {
+		margin-bottom: 20px;
+	} 
+}

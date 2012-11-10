@@ -1,15 +1,23 @@
 body {
-  background-color: #fff;
+	background: url(body.gif) repeat;
+	background-color: #fff;
   color: #333;
   font-family: helvetica, arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
 }
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
+.form-inputs {
+	margin: 10px 0;
+	.input {
+		margin: 10px 0;
+		label {
+			margin-right: 10px;
+		}
+		input.radio_buttons {
+			margin-right: 3px;
+		}
+	}
 }
 
 a {
@@ -23,12 +31,13 @@ a {
   }
 }    
 
-td {
-	padding: 5px 10px 5px 0;
-}
-
 #notice {
-  color: green;
+	background-color: #BEEDD9;
+	display: inline-block;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #47CC95;
+	color: #25A16D;
 }
 
 .field_with_errors {
