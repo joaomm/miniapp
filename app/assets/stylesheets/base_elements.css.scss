@@ -69,11 +69,11 @@ a {
   }
 }
 
-.btn {
+.btn, input[type="submit"] {
 	color: white;
 	padding: 5px 10px;
 	border-radius: 2px;
-	background-color: #E95C33;
+	background-color: #3AA7D4;
 	border: 1px solid rgba(0, 0, 0, 0.0980392);
 	font-size: 12px;
 	cursor: pointer;
